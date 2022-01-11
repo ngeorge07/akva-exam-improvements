@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <link
+      href="../node_modules/vanillajs-datepicker/dist/css/datepicker-bs5.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://use.typekit.net/mss5pcz.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Product</title>
+    <title>Make an appointment</title>
   </head>
   <body>
     <header>
@@ -383,34 +387,57 @@
     </header>
 
     <main>
-      <section id="product-page">
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <div id="product-page-det">
-          <h1></h1>
-          <p></p>
+      <template>
+        <div id="time-options">
+          <p>Time:</p>
 
-          <p>
-            You are always welcome to see and try our jewellery at our showroom
-            in Copenhagen. You can make an appointment via e-mail at
-            <a href="mailto:info@akvajewellery.com" class="link-line"
-              >info@akvajewellery.com</a
-            >
-          </p>
-          <div id="product-price"></div>
-
-          <div id="size-buttons">
-            <select name="sizes" id="size-select" autocomplete="off"></select>
-
-            <button class="link-line clear-invisible">Clear</button>
+          <div id="container-11-00">
+            <input type="radio" id="1100" name="time" value="11:00" checked />
+            <label class="times" for="1100">11:00</label>
           </div>
 
-          <button id="add" class="inactive">Add to cart</button>
-          <button><a href="appointment.html">Make an appointment</a></button>
+          <div id="container-12-00">
+            <input type="radio" id="1200" name="time" value="12:00" />
+            <label class="times" for="1200">12:00</label>
+          </div>
+
+          <div id="container-13-00">
+            <input type="radio" id="1300" name="time" value="13:00" />
+            <label class="times" for="1300">13:00</label>
+          </div>
+
+          <!-- <div id="container-14-35">
+                <input type="radio" id="1435" name="time" value="14:35" />
+                <label class="times" for="1435">14:35</label>
+              </div> -->
+
+          <button id="submit" type="submit">Send</button>
         </div>
-      </section>
+      </template>
+
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        action="https://usebasin.com/f/ab2834d7e27b"
+      >
+        <div>
+          <label for="email">E-mail: </label>
+          <input type="email" name="e-mail" id="email" />
+        </div>
+
+        <div>
+          <label for="date">Date: </label>
+          <input
+            name="date"
+            autocomplete="off"
+            placeholder="dd/mm/yyyy"
+            id="date"
+          />
+        </div>
+
+        <div id="time"></div>
+      </form>
     </main>
 
     <footer>
@@ -465,6 +492,8 @@
         & Helle Moos</small
       >
     </footer>
-    <script src="../js/product.js"></script>
+
+    <script src="../js/form.js"></script>
+    <script src="../node_modules/vanillajs-datepicker/dist/js/datepicker.js"></script>
   </body>
 </html>

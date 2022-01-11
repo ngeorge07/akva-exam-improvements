@@ -855,10 +855,15 @@ footer .link-line::after {
 }
 
 #product-page-det > button:nth-of-type(2) {
-  padding: 0.8rem 0;
   background-color: #3b5f73;
   color: #f8f8f8;
   border: 2px solid #3b5f73;
+}
+
+#product-page-det > button:nth-of-type(2) a {
+  padding: 0.8rem 0;
+  display: block;
+  width: 100%;
 }
 
 #product-price {
