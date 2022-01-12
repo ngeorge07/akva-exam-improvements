@@ -1,5 +1,10 @@
 form {
-  max-width: 60%;
+  max-width: 85%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid black;
+  padding: 3rem;
   margin: 5rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,12 +164,16 @@ select {
   font: var(--button-font);
   border-bottom: 1px solid #c1c1c1;
   padding-bottom: 0.2rem;
-  width: 40%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-right: 2rem;
 }
 
 @media screen and (max-width: 1185px) {
   form {
     max-width: 80%;
+    padding: 2rem;
   }
 }
 
@@ -176,16 +185,25 @@ select {
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
   select {
-    width: 80%;
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  input[name="date"] {
+    margin-top: 0.3rem;
+    margin-left: 0rem;
+  }
+  input[type="email"] {
+    margin-top: 0.3rem;
+    margin-left: 0rem;
   }
 }
 
 @media screen and (max-width: 390px) {
   form {
     max-width: 95%;
-  }
-  select {
-    width: 85%;
+    padding: 1rem;
   }
   #date {
     margin-left: 0;
