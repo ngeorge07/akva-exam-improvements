@@ -93,6 +93,12 @@ function showAvailableHours(a) {
     }
   }
 
+  const avTimes = clone.querySelector("#times");
+  const firstTime = avTimes.querySelector("div:first-of-type");
+  const firstTimeInput = firstTime.querySelector("input");
+
+  firstTimeInput.setAttribute("checked", true);
+
   document.querySelector("#time").appendChild(clone);
 
   console.log(selectedDay);
