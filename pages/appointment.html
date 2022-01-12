@@ -390,27 +390,34 @@
     <main>
       <template>
         <div id="time-options">
-          <p>Time:</p>
+          <p>Preferred Time</p>
+          <div id="times">
+            <div id="container-11-00">
+              <input type="radio" id="1100" name="time" value="11:00" checked />
+              <label for="1100">11:00</label>
+            </div>
 
-          <div id="container-11-00">
-            <input type="radio" id="1100" name="time" value="11:00" checked />
-            <label class="times" for="1100">11:00</label>
+            <div id="container-12-00">
+              <input type="radio" id="1200" name="time" value="12:00" />
+              <label for="1200">12:00</label>
+            </div>
+
+            <div id="container-13-00">
+              <input type="radio" id="1300" name="time" value="13:00" />
+              <label for="1300">13:00</label>
+            </div>
+            <!-- 
+            <div id="container-14-35">
+              <input type="radio" id="1435" name="time" value="14:35" />
+              <label class="times" for="1435">14:35</label>
+            </div> -->
           </div>
 
-          <div id="container-12-00">
-            <input type="radio" id="1200" name="time" value="12:00" />
-            <label class="times" for="1200">12:00</label>
-          </div>
-
-          <div id="container-13-00">
-            <input type="radio" id="1300" name="time" value="13:00" />
-            <label class="times" for="1300">13:00</label>
-          </div>
-
-          <!-- <div id="container-14-35">
-                <input type="radio" id="1435" name="time" value="14:35" />
-                <label class="times" for="1435">14:35</label>
-              </div> -->
+          <select name="specific-product" autocomplete="off">
+            <option value="choose">
+              Choose the product you are interested in
+            </option>
+          </select>
 
           <button id="submit" type="submit">Send</button>
         </div>
@@ -444,13 +451,27 @@
       >
         <h2>Appointment form</h2>
         <div>
-          <label class="required" for="email">E-mail: </label>
-          <input type="email" name="e-mail" id="email" require />
+          <label for="email">
+            <div id="input-info">
+              <span id="mata">Your e-mail address</span>
+              <input
+                placeholder="example@email.com"
+                type="email"
+                name="e-mail"
+                id="email"
+                autocomplete="off"
+                required
+              />
+            </div>
+
+            <span class="error" aria-live="polite"></span>
+          </label>
         </div>
 
         <div>
-          <label for="date">Date: </label>
+          <label for="date">Appointment Date </label>
           <input
+            readonly="readonly"
             name="date"
             autocomplete="off"
             placeholder="dd/mm/yyyy"
