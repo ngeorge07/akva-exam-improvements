@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="https://use.typekit.net/mss5pcz.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/form.css" />
     <title>Make an appointment</title>
   </head>
   <body>
@@ -415,15 +416,36 @@
         </div>
       </template>
 
+      <section id="hero-img">
+        <img
+          id="element-observer"
+          src="https://georgendesign.com/akva-photos/placeholder-image.webp"
+          alt="placeholder"
+        />
+      </section>
+
+      <section id="list-info">
+        <h1>COME AND TRY OUR PRODUCTS YOURSELF</h1>
+        <p>
+          You are more than welcome to make an appointment and try our jewellery
+          before you make a purchase. We encourage our customers to come visit
+          us at our store because we believe in transparency. If you want to
+          make an appointment please fil in the form below with the date and
+          time that fit your schedule and the jewellery piece you are interested
+          in seeing.
+        </p>
+      </section>
+
       <form
         name="contact"
         method="POST"
         data-netlify="true"
         action="https://usebasin.com/f/ab2834d7e27b"
       >
+        <h2>Appointment form</h2>
         <div>
-          <label for="email">E-mail: </label>
-          <input type="email" name="e-mail" id="email" />
+          <label class="required" for="email">E-mail: </label>
+          <input type="email" name="e-mail" id="email" require />
         </div>
 
         <div>
